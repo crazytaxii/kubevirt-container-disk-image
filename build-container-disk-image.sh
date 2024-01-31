@@ -11,7 +11,7 @@ main() {
     fi
     tmpdir=$(mktemp -d)
     pushd $tmpdir
-    wget $URL
+    wget -q $URL
     img_file=$(ls)
     # get image information with qemu-img
     info=$(qemu-img info $img_file --output json)
